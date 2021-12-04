@@ -1,23 +1,25 @@
-import { useEffect, useMemo } from "react";
-import Weather from "./03.state/Weather";
+import MyInput from "./05.refs/MyInput";
 
 function App() {
-  const propsObj = {
-    title:'weather',
-    handleClick: () => {
-      console.log('handleClick');
-    }
-  }
-  useEffect(() => {
-    setTimeout(() => {
-      propsObj.title = 'hol!'
-    },2000)
-  }, [])
+  // const propsObj = {
+  //   name:'xander',
+  //   age:'18',
+  //   gender:'男'
+  // }
+
+  // 测试propsObj属性改变，会不会影响页面刷新 no!
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     propsObj.name = 'holden'
+  //   },2000)
+  // }, [])
   return (
     <div className="App">
       App
       {/* <MyComponent /> */}
-      <Weather name='xander' age="18" {...propsObj}/>
+      {/* <Weather /> */}
+      {/* <MyList {...propsObj}/> */}
+      <MyInput />
     </div>
   );
 }
