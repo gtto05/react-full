@@ -1,4 +1,4 @@
-import MyInput from "./05.refs/MyInput";
+import MyInput from "./05.ref/MyInput";
 
 function App() {
   // const propsObj = {
