@@ -1,4 +1,5 @@
-import MyInput from "./05.ref/MyInput";
+import { useState } from "react";
+import ComponentLife from "./06.componentLife/ComponentLife";
 
 function App() {
   // const propsObj = {
@@ -13,13 +14,22 @@ function App() {
   //     propsObj.name = 'holden'
   //   },2000)
   // }, [])
+
+  const [title, setTitle] = useState('life')
+
+  // 强制给子组件传一次不一样的参数
+  function forceUpdate() {
+    setTitle(title+'!')
+  }
+
   return (
-    <div className="App">
+    <div className="App" onClick={forceUpdate}>
       App
       {/* <MyComponent /> */}
       {/* <Weather /> */}
       {/* <MyList {...propsObj}/> */}
-      <MyInput />
+      {/* <MyInput /> */}
+      <ComponentLife title={title} />
     </div>
   );
 }
