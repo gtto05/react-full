@@ -25,9 +25,10 @@
 
 import React, { useState } from 'react'
 
-export default function Weather() {
+export default function Weather(props) {
+  console.log(props);
   const [isHot, setisHot] = useState(true)
-
+  console.log(props.title);
   function changeWeather() {
     setisHot(!isHot)
   }
