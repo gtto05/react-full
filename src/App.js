@@ -23,7 +23,9 @@ function App() {
   }
 
   return (
-    <div className="App" onClick={forceUpdate}>
+    <div className="App" onClick={() => {
+      
+    }}>
       App
       {/* <MyComponent /> */}
       {/* <Weather /> */}
