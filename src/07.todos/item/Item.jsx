@@ -4,11 +4,18 @@ import './style.css';
 
 export default class Item extends Component {
 
+  delete = (id) => {
+    return (e) => {
+      e.preventDefault()
+      // 通过id删除comment
+      this.context.deleteComment(id)
+    }
+  }
 
   static contextType = commentContext
 
   render() {
-    const comments = this.context
+    const {comments,deleteComments} = this.context
     return (
       // <li className="list-group-item">
       //   <div className="handle">
@@ -23,7 +30,7 @@ export default class Item extends Component {
             return (
               <li className="list-group-item" key={comment.id}>
                 <div className="handle">
-                  <a href="#">删除</a>
+                  <a href="#" onClick={this.delete(comment.id)}>删除</a>
                 </div>
                 <p className="user"><span >{comment.name}</span><span>说:</span></p>
                 <p className="centence">{comment.content}</p>

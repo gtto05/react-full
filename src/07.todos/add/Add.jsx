@@ -5,11 +5,13 @@ export default class Add extends Component {
 
   add= () => {
     const {addComment} = this.props
-    const name = this.userNameInput.value
-    const content = this.textareaInput.value
+    let name = this.userNameInput.value
+    let content = this.textareaInput.value
     const comment = {id:nanoid(),name,content}
     console.log(comment);
-    addComment(comment)
+    addComment(comment);
+    name = ''
+    content = ''
   }
 
 

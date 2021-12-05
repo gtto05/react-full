@@ -22,7 +22,22 @@ export default class Todos extends Component {
     this.setState({ comments })
   }
 
+  // 
+  deleteComment = (id) => {
+    let comments = [...this.state.comments]
+    comments = comments.filter((item) => {
+      return item.id !== id
+    })
+    console.log(id);
+    console.log(comments);
+    this.setState({comments})
+  }
+
   render() {
+    const commentsObj = {
+      comments:this.state.comments,
+      deleteComment:this.deleteComment
+    }
     return (
       <div>
         <header className="site-header jumbotron">
@@ -35,7 +50,7 @@ export default class Todos extends Component {
           </div>
         </header>
         <div className="container">
-          <Provider value={this.state.comments}>
+          <Provider value={commentsObj}>
             <Add addComment={this.addComment} />
             <List />
           </Provider>
