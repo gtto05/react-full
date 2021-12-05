@@ -3,15 +3,18 @@ import { nanoid } from 'nanoid'
 
 export default class Add extends Component {
 
-  add= () => {
-    const {addComment} = this.props
+  add = () => {
+    // 从props中获取添加comment方法
+    const { addComment } = this.props
     let name = this.userNameInput.value
     let content = this.textareaInput.value
-    const comment = {id:nanoid(),name,content}
-    console.log(comment);
-    addComment(comment);
-    name = ''
-    content = ''
+    const comment = { id: nanoid(), name, content }
+    // console.log(comment);
+    if (name.trim() || content.trim()) {
+      addComment(comment);
+      name = ''
+      content = ''
+    }
   }
 
 
@@ -23,7 +26,7 @@ export default class Add extends Component {
             <label>用户名</label>
             <input type="text" className="form-control" placeholder="用户名" ref={(input) => {
               this.userNameInput = input
-            }}/>
+            }} />
           </div>
           <div className="form-group">
             <label>评论内容</label>

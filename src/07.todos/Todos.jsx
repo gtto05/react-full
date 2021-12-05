@@ -34,13 +34,12 @@ export default class Todos extends Component {
   }
 
   render() {
-    
     // 给context对象上value赋的对象
     const commentsObj = {
       comments:this.state.comments,
       deleteComment:this.deleteComment
     }
-
+    
     return (
       <div>
         <header className="site-header jumbotron">

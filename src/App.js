@@ -1,4 +1,5 @@
-import Todos from './07.todos/Todos'
+import Search from './08.axios/Search'
+
 function App() {
   // const propsObj = {
   //   name:'xander',
@@ -28,7 +29,8 @@ function App() {
       {/* <MyList {...propsObj}/> */}
       {/* <MyInput /> */}
       {/* <ComponentLife title={title} /> */}
-      <Todos />
+      {/* <Todos /> */}
+      <Search />
     </div>
   );
 }
