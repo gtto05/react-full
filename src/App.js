@@ -1,6 +1,4 @@
-import { useState } from "react";
-import ComponentLife from "./06.componentLife/ComponentLife";
-
+import Todos from './07.todos/Todos'
 function App() {
   // const propsObj = {
   //   name:'xander',
@@ -15,23 +13,22 @@ function App() {
   //   },2000)
   // }, [])
 
-  const [title, setTitle] = useState('life')
+  // const [title, setTitle] = useState('life')
 
-  // 强制给子组件传一次不一样的参数
-  function forceUpdate() {
-    setTitle(title+'!')
-  }
+  // // 强制给子组件传一次不一样的参数
+  // function forceUpdate() {
+  //   setTitle(title+'!')
+  // }
 
   return (
-    <div className="App" onClick={() => {
-      
-    }}>
-      App
+    <div className="App">
+      {/* App */}
       {/* <MyComponent /> */}
       {/* <Weather /> */}
       {/* <MyList {...propsObj}/> */}
       {/* <MyInput /> */}
-      <ComponentLife title={title} />
+      {/* <ComponentLife title={title} /> */}
+      <Todos />
     </div>
   );
 }
