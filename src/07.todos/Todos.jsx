@@ -16,13 +16,13 @@ export default class Todos extends Component {
   }
 
 
-  // 添加评论
+  // 添加评论(直接props传递给子组件)
   addComment = (comment) => {
     let comments = [comment, ...this.state.comments]
     this.setState({ comments })
   }
 
-  // 
+  // 删除评论(放入context对象中供子孙组件使用)
   deleteComment = (id) => {
     let comments = [...this.state.comments]
     comments = comments.filter((item) => {
@@ -34,10 +34,13 @@ export default class Todos extends Component {
   }
 
   render() {
+    
+    // 给context对象上value赋的对象
     const commentsObj = {
       comments:this.state.comments,
       deleteComment:this.deleteComment
     }
+
     return (
       <div>
         <header className="site-header jumbotron">
