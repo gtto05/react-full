@@ -100,9 +100,16 @@
 // Message
 <Outlet />
 // 取数据：由于element渲染出来的不是路由组件，不能通过props.params去取
-// 方式一：用函数组件useParams钩子取
+// 方式一：用函数组件useParams钩子取，函数式跳转也是同理
 // 方式二：手写withRouter高阶组件
 ```
+
+## 10. redux && react-redux
+
+1. redux 核心 (store, reducer, actions)
+2. react-redux 核心(connect(映射属性,映射方法)(目标容器))
+
+## 11. 
 
 
 

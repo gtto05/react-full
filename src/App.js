@@ -1,4 +1,6 @@
-import RouteIndex from './09.route/RouteIndex'
+import Count from "./10.redux/Count";
+
+
 function App() {
   // const propsObj = {
   //   name:'xander',
@@ -30,7 +32,8 @@ function App() {
       {/* <ComponentLife title={title} /> */}
       {/* <Todos /> */}
       {/* <Search /> */}
-      <RouteIndex />
+      {/* <RouteIndex /> */}
+      <Count />
     </div>
   );
 }
