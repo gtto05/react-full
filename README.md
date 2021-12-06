@@ -45,7 +45,21 @@
 
 ## 08. axios
 
+1. 第三方插件
+2. fetch(原生)
+3. pubsub-js
+   1. 发布publish('msg',{})
+   2. 订阅subscribe('msg',(msg,data)=>{})
 
+## 09. 路由
+> v6 版本改动：
+> Routes 替代 Switch (更灵活的匹配机制)
+> element 替代 component / render ， 接收一个组件为参数，更加灵活好用
+> Route 可以嵌套， 显示子组件用 <Outlet />
+
+1. 基本使用
+2. 特有属性
+3. 高阶组件
 
 
 

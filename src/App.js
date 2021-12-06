@@ -1,5 +1,4 @@
-import Search from './08.axios/Search'
-
+import RouteIndex from './09.route/RouteIndex'
 function App() {
   // const propsObj = {
   //   name:'xander',
@@ -30,7 +29,8 @@ function App() {
       {/* <MyInput /> */}
       {/* <ComponentLife title={title} /> */}
       {/* <Todos /> */}
-      <Search />
+      {/* <Search /> */}
+      <RouteIndex />
     </div>
   );
 }
