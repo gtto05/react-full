@@ -61,6 +61,49 @@
 2. 特有属性
 3. 高阶组件
 
+```jsx
+
+// v5
+<Switch>
+   <Route path="/about" component={About}/>
+   <Route path="/home" component={Home}>
+   <Redirect to="/home">
+</Switch>
+
+// Home
+<Switch>
+   <Route path="/home/news" component={News}/>
+   <Route path="/home/message" component={Message}/>
+   <Redirect to="/home/news">
+</Switch>
+
+// Message
+<Route path="/home/message/detail/:id" component={Detail}/>
+// 取参数：props.params
+
+// v6
+<Routes>
+   <Route path="about" element={<About/>} />
+   <Route path="home" element={<Home/>}>
+      <Route path="news" element={<News/>} />
+      <Route path="message" element={<Message/>}>
+         <Route path="detail/:id" element={<Detail/>}/>
+      </Route>
+      <Route path="" element={<Navigate to="news"/>} />
+   </Route>
+   <Route path="" element={<Navigate to="about"/>}/>
+</Routes>
+
+// Home
+<Outlet />
+
+// Message
+<Outlet />
+// 取数据：由于element渲染出来的不是路由组件，不能通过props.params去取
+// 方式一：用函数组件useParams钩子取
+// 方式二：手写withRouter高阶组件
+```
+
 
 
 
